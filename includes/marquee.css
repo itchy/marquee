@@ -1,14 +1,13 @@
 @charset "UTF-8";
 
 /* CSS Document                  */
-/* Written by Chris Converse     */
-/* for Lynda.com                 */
+/* Written by Scott Johnson      */
 
 body { padding: 35px;background-color: #fff; font-family: Arial; color: #555; font-size: .75em; }
 
 .marquee_panels { display: none; }
 .marquee_container { position: relative; width: 395px; height: 250px; overflow: hidden; margin: 0px 0px 30px 0px; padding: 0px; }
-.marquee_content { position: absolute; top: 0px; left: 0px; display: none; }
+.marquee_content { position: absolute; top: 0px; left: 0px; /*display: none;*/ }
 .marquee_panel_content {
   width: 395px;
   height: 250px;
@@ -21,25 +20,11 @@ body { padding: 35px;background-color: #fff; font-family: Arial; color: #555; fo
   margin-right: 10px;
 }
 
-.marquee_caption {
-	width: 400px;
-	margin: 0px;
-	padding: 15px 0px 10px 0px;
-	color: #fff;
-	position: absolute;
-	top: 250px;
-	left: 0px;
-	background: url(../images/template/marquee_caption.png) 0px 0px;
-}
-.marquee_caption_content { width: 350px; padding: 0px 0px 0px 25px; }
-.marquee_caption h2 { margin: 0px 0px 10px 0px; color: #fff; font-size: 1.25em; font-weight: normal; text-transform: uppercase; }
-.marquee_caption p { margin: 0px 0px 12px 0px; color: #fff; }
-.marquee_caption a { color: #ffc600; }
-.marquee_caption a:hover { color: #fff; }
-.marquee_flag { float: left; margin-right: 10px; }
-
-.marquee_nav { position: absolute; width: 240px; top: 222px; right: 20px; text-align: right; }
-.marquee_nav a {
+.marquee_panel_content a.data { display: none;}
+.marquee_nav { position: relative; top: 210px; padding-top: 10px; width: 395px; height: 25px; background: #EFF8FA; }
+.marquee_nav a { float: left; margin-left: 10px; }
+.marquee_nav_buttons { float:right; margin-right: 30px; }
+.marquee_nav_buttons a {
 	display: inline-block;
 	width: 18px;
 	height: 18px;
@@ -47,6 +32,29 @@ body { padding: 35px;background-color: #fff; font-family: Arial; color: #555; fo
 	background: url(../images/template/nav_buttons.png) no-repeat 0px 0px;
 	cursor: pointer;
 }
-.marquee_nav a:hover { background-position: -25px 0px; }
-.marquee_nav a.selected { background-position: -50px 0px; }
+.marquee_nav_buttons a:hover { background-position: -25px 0px; }
+.marquee_nav_buttons a.selected { background-position: -50px 0px; }
+
+.marquee_container.auto_play .marquee_nav a {
+  opacity: 0.4;
+  filter: alpha(opacity = 40);
+}
+
+.marquee_container.auto_play .marquee_nav a.selected{
+  opacity: 1;
+  filter: alpha(opacity = 100);
+}
+
+/* HEADER CHANGES */
+.header .marquee_container { position: relative; width: 695px; height: 250px; overflow: hidden; margin: 0px 0px 30px 0px; padding: 0px; }
+.header .marquee_panel_content {
+  width: 695px;
+  height: 250px;
+  display: block;
+  float: left;
+}
+.header .marquee_nav { position: relative; top: 210px; padding-top: 10px; width: 695px; height: 25px; background: #EFF8FA; }
+
+
+
 
